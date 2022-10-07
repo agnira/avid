@@ -76,7 +76,7 @@ class ARIG_OT_resnap(types.Operator):
     def execute(self, context: context):
         index = context.scene.annotation_index
         print(context.scene.annotation_index)
-        capture(str(index))
+        capture(str(index+1))
         context.scene.annotations[index].frame = context.scene.frame_current
         return {'FINISHED'}
 
